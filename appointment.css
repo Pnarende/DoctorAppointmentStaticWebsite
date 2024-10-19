@@ -1,0 +1,60 @@
+/* General Styles */
+body {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Appointment Booking Section */
+.appointment-booking {
+    padding: 50px 20px;
+    background-color: #f9f9f9;
+    max-width: 500px;
+    margin: 50px auto;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.appointment-booking h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2em;
+    color: #0277bd;
+}
+
+.appointment-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.appointment-form label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.appointment-form input,
+.appointment-form select {
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.appointment-form button {
+    padding: 10px;
+    font-size: 1.2em;
+    background-color: #0288d1;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.appointment-form button:hover {
+    background-color: #0277bd;
+}

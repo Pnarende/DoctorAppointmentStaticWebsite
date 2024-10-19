@@ -1,0 +1,604 @@
+/* General Styles */
+body {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    height: 3000px;
+}
+
+/* Header */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    width: 100%;
+    background-color: hsl(200, 37%, 97%);
+    color: rgb(12, 12, 12);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 20px;
+    z-index: 1000;
+}
+
+header nav {
+    display: flex;
+    justify-content: center;
+    flex-grow: 1;
+}
+
+header .logo {
+    font-size: 1.5em;
+    font-weight: bold;
+    text-align: center;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    height: 100px;
+    text-align: center;
+}
+
+header nav ul li {
+    margin-left: 20px;
+    padding-top: 35px;
+    text-align: center;
+}
+
+header nav ul li a {
+    color: #080808;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+header nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Hero Section */
+.hero1 {
+    margin-top: 100px;
+    position: relative;
+}
+
+.hero1-slider {
+    position: relative;
+    width: 100%;
+    height: 600px; /* Adjust height as needed */
+    overflow: hidden;
+}
+
+.slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.slide.active {
+    opacity: 1;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hero1-content {
+    position: absolute;
+    z-index: 2;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: black;
+    text-align: center;
+}
+
+.hero1 h1 {
+    font-size: 2.5em;
+    margin: 0;
+}
+
+.hero1 .highlight {
+    color: #0277bd; /* Blue color for "Medical" and "Trust" */
+}
+
+.list-courses {
+    position: relative; /* Ensure relative positioning of the container */
+    margin-top: -180px; /* Adjust this value to control the overlap */
+    z-index: 10; /* Ensure the boxes appear above the hero section */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.list-courses .box1, .box2, .box3  {
+    display: inline-block;
+    height: 300px;
+    width: 30%; /* Adjust to fit 3 items in a row */
+    margin: 10px;
+    background-color: #0277bd;
+    vertical-align: top;
+    text-align: center;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+    padding: 10px;
+    border-radius: 15px;
+    color: white;
+    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.list-courses .box1:hover,
+.list-courses .box2:hover,
+.list-courses .box3:hover {
+    transform: translateY(-10px); /* Move the box up slightly */
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2); /* Add a larger shadow */
+    background-color: #0288d1; /* Change background color on hover */
+}
+
+.list-courses .box3 {
+    margin-right: 0;
+}
+
+.quote {
+    text-align: center;
+    font-size: xx-large;
+    margin: 100px 20px; /* Add some horizontal margin for better spacing */
+}
+
+div i {
+    margin-right: 10px; /* Adds space between icons */
+    height: 100px;
+}
+
+.box5 {
+    margin-left: 170px;
+}
+
+/* Icon Container */
+.icon-container {
+    display: flex;
+    margin-top: 0px;
+    justify-content: center;
+    align-items: center;
+    height: 30vh; /* Full viewport height */
+    gap: 20px; /* Space between icons */
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+}
+
+/* Style the icons and add a circle around them */
+.icon-container i {
+    margin-top: 20px;
+    font-size: 4rem; /* Icon size */
+    width: 120px; /* Fixed width to ensure a perfect circle */
+    height: 120px; /* Fixed height to match width */
+    border: 1px solid transparent; /* Circle border */
+    border-radius: 50%; /* Makes the border a circle */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease; /* Smooth transition for hover effect */
+}
+
+/* Hover effect - changes the circle border to blue */
+.icon-container i:hover {
+    border-color: none; /* Change border color on hover */
+    background-color: #0077b6; /* Optional: Add a background color */
+}
+
+.box6 {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center the content horizontally */
+    text-align: center; /* Center the text below the image */
+    margin-top: 20px;
+}
+
+.box6 img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%; /* Makes the image circular */
+    background-color: none; /* No background initially */
+    padding: 10px; /* Adds space between image and border */
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+/* Hover effect to intensify the blue color */
+.box6 img:hover {
+    background-color: #0288d1; /* Change to a darker blue on hover */
+}
+
+.box6 h4 {
+    margin-top: 25px; /* Space between the image and the text */
+    color: black; /* Text color */
+}
+
+.info {
+    width: 92.5%;
+    margin: 5px auto; /* Center the section */
+    background-color: #0288d1;
+    display: flex;
+    justify-content: space-evenly; /* Space out icon-text pairs evenly */
+    align-items: center;
+    height: 30vh;
+    padding: 0 20px; /* Add padding to prevent content from touching edges */
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+}
+
+.icon-with-text {
+    display: flex;
+    align-items: center; /* Vertically center the text with the icon */
+    width: 200px; /* Fix the width to align text and icons consistently */
+    margin: 10px;
+}
+
+.room, .sp-doctor, .hp-patients, .yoe {
+    width: 120px; /* Fixed width for the circle */
+    height: 120px; /* Fixed height to match width */
+    border-radius: 50%; /* Makes the container a circle */
+    background-color: white; /* Circle color as white */
+    display: flex; /* Enables flexbox for centering */
+    justify-content: center; /* Centers the icon horizontally */
+    align-items: center; /* Centers the icon vertically */
+    transition: all 0.3s ease; /* Smooth transition for hover effect */
+    border: 2px solid transparent; /* Initial transparent border */
+    flex-shrink: 0; /* Prevent the circle from shrinking */
+}
+
+.info-room {
+    padding-left: 20px;
+}
+
+.room i, .sp-doctor i, .hp-patients i, .yoe i {
+    font-size: 4rem; /* Icon size */
+    color: #0288d1; /* Icon color */
+}
+
+.room:hover, .sp-doctor:hover, .hp-patients:hover, .yoe:hover {
+    background-color: white; /* Background color remains white */
+    border-color: black; /* Change border color to black on hover */
+}
+
+.icon-text {
+    font-size: 2.2rem; /* Adjust text size as needed */
+    color: white; /* Text color */
+    margin-left: 15px; /* Space between the icon and the text */
+    white-space: nowrap; /* Prevent the text from wrapping to the next line */
+}
+
+.text {
+    font-size: 1.4rem;
+    color: white;
+}
+
+.sample {
+    text-align: center;
+    margin-top: 50px;
+}
+
+/* Services */
+.services {
+    position: relative;
+    margin-top: -180px;
+    z-index: 10;
+}
+
+.icon-container {
+    display: flex;
+    margin-top: 250px;
+    flex-wrap: wrap;
+    justify-content: center; /* Center items */
+}
+
+.service-item {
+    display: flex;
+    align-items: center;
+    width: 30%; /* Adjust to fit 3 items in a row */
+    background-color: hsl(210, 5%, 85%);
+    margin: 20px;
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    color: black;
+    transition: box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+.service-item:hover {
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+    background-color: #f0f0f0;
+}
+
+.service-item i {
+    font-size: 50px;
+    margin-right: 20px;
+    color: #0288d1; /* Change this to the desired icon color */
+}
+
+.text-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.text-content h1, .text-content h2, .text-content h4 {
+    margin-left: 20px;
+}
+
+.text-content p {
+    margin-top: 10px;
+    font-size: 14px;
+    color: black;
+}
+
+.care {
+    position: relative;
+    z-index: 1;
+    margin-top: 850px;
+    height: 350px;
+    width: 100%;
+    margin: 800px 5px 50px 5px;
+    background-color: #0288d1;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    align-content: center;
+    color: #f0f0f0;
+    font-size: x-large;
+}
+
+.care button {
+    height: 50px;
+    width: 170px;
+    border-color: aliceblue;
+    color: #0077b6;
+    border-radius: 10px;
+}
+.care button:hover{
+    background-color: #0288d1;
+    color: antiquewhite;
+    font-size: x-large;
+}
+.prices{
+    background-color: hwb(240 93% 5%);
+    text-align: center;
+    align-content: center;
+    color: black;
+}
+.price-items{
+    height:650px;
+    width: 100%px;
+    display: flex;
+    margin-bottom: 25px;
+    
+    
+}
+.price-items h1{
+    font-size: x-large;
+}
+.price-items .item1, .item2, .item3{
+    width:25%;
+    margin-left: 90px;
+    background-color: white;
+    border-color: rgb(5, 4, 4);
+}
+.price-items i{
+    margin-top: 50px;
+    align-items: center;
+    font-size: 5rem; 
+    width: 100px; /* Ensures consistent width if needed */
+    height: 100px; /* Sets height if the icon needs to be constrained */ 
+    justify-content: center;
+  color: #0288d1;
+ }
+ .price-items p{
+    font-size: xx-large;
+    color: #0288d1;
+    font-weight: bold;
+ }
+ .price-items .buy{
+    height: 40px;
+    width:180px;
+    background-color: #0077b6;
+    border-radius: 5px;
+    border-color: antiquewhite;
+ 
+}
+.price-items .buy:hover{
+    
+    font-size: medium;
+    color: hsl(210, 8%, 90%);
+}
+.news{
+    margin-top: 5%;
+    text-align: center;
+    align-items: center;
+    
+   
+}
+
+.news-head .news1, .news2, .news3 {
+    margin-top: 10px;
+    height: 260px;
+    width: 26%;
+    margin-left: 2%;
+    display: inline-table;
+
+    background-color: #f0f0f0;
+    overflow: hidden; 
+    text-align: center;
+    position: relative;
+}
+
+.news-head .news1 img, .news2 img, .news3 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    vertical-align: middle;
+   
+}
+.news-head .read{
+    height: 30px;
+    width: 120px;
+    margin-top: 25px;
+    padding-left: 2px;
+    background-color: azure;
+    border-radius: 5px;
+    border-color: #7c8080;
+}
+.news-head .read:hover{
+    background-color: #0288d1;
+    color: white;
+    font-size: 15px;
+   
+}
+.clean {
+    margin-top: 50px;
+    text-align: center;
+    align-items: center;
+}
+
+.clean-ness {
+    margin-top: 10px;
+    height: 260px;
+    width: 100%;
+    display: flex;
+    margin-left: 30px;
+    overflow: hidden; /* Hide overflowing content */
+    white-space: nowrap; /* Prevent wrapping */
+    align-items: center; /* Center content vertically */
+}
+
+.clean-ness > div {
+    display: inline-block;
+    height: 230px;
+    width: 23%;
+    margin: 0 5px; /* Margin for spacing between items */
+    vertical-align: top;
+}
+
+.clean-ness img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+
+
+
+/* Footer */
+footer {
+    position: fixed;
+    background-color: #0077b6;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+footer .footer-content {
+    display: flex;
+    justify-content: center; /* Center footer content */
+    flex-wrap: wrap;
+}
+
+footer .quick-links a,
+footer .social-media a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+footer .quick-links a:hover,
+footer .social-media a:hover {
+    text-decoration: underline;
+}
+
+footer .contact-info p {
+    margin: 5px 0;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    header nav ul {
+        flex-direction: column;
+        height: auto; /* Allow height to adjust for vertical layout */
+    }
+
+    .hero1 h1 {
+        font-size: 2em;
+    }
+
+    .list-courses .box1, .list-courses .box2, .list-courses .box3 {
+        width: 100%; /* Stack items vertically on smaller screens */
+        margin: 10px 0;
+    }
+
+    .info {
+        flex-direction: column; /* Stack items vertically */
+        align-items: center;
+        padding: 10px;
+    }
+
+    .icon-with-text {
+        width: 100%; /* Full width for better stacking */
+        justify-content: center; /* Center items horizontally */
+    }
+
+    .info-room {
+        padding-left: 0; /* Remove extra padding on smaller screens */
+    }
+
+    .service-item {
+        width: 100%; /* Stack items vertically on smaller screens */
+        margin: 10px 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero1 h1 {
+        font-size: 1.5em; /* Further reduce font size for smaller screens */
+    }
+
+    header nav ul li {
+        margin-left: 0;
+        padding-top: 10px;
+    }
+
+    .icon-container i {
+        font-size: 3rem; /* Reduce icon size for smaller screens */
+        width: 100px; /* Adjust width */
+        height: 100px; /* Adjust height */
+    }
+
+    .box6 img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .info {
+        padding: 10px;
+    }
+
+    .icon-with-text {
+        width: 100%; /* Full width for better stacking */
+    }
+
+    .text-content p {
+        font-size: 12px; /* Reduce font size for better readability */
+    }
+
+    footer .footer-content {
+        flex-direction: column;
+    }
+
+    footer .quick-links a,
+    footer .social-media a {
+        margin: 5px 0;
+    }
+}
